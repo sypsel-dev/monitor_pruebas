@@ -1,0 +1,23 @@
+[
+  {
+    "idCliente": "CFE-1111-1111-1111",
+    "geolocalizacion": "32.498714447021486,-116.973419189453120",
+    "punto_caliente": "true",
+    "cuadrante": "1",
+    "fecha": "Wed Jan 25 2023 09:30:19 GMT-0800 (Pacific Standard Time)"
+  },
+  {
+    "idCliente": "CFE-1111-1111-1111",
+    "geolocalizacion": "32.498714447021486,-116.973419189453120",
+    "punto_caliente": "true",
+    "cuadrante": "1",
+    "fecha": "Wed Jan 25 2023 09:30:49 GMT-0800 (Pacific Standard Time)"
+  },
+  {
+    "idCliente": "CFE-1111-1111-1111",
+    "geolocalizacion": "32.498714447021486,-116.973419189453120",
+    "punto_caliente": "true",
+    "cuadrante": "1",
+    "fecha": "Wed Jan 25 2023 23:22:58 GMT+0000 (Coordinated Universal Time)"
+  }
+]
