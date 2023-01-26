@@ -46,3 +46,5 @@ export class AppComponent {
     });
   }
 }
+
+export class PaginatorOverviewExample {}
