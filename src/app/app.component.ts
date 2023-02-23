@@ -16,6 +16,7 @@ interface Mde {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  device_mde = "MDE";
   title = 'myApp';
   mde: Mde[] = mdeData;  
   //constructor(){
@@ -23,7 +24,7 @@ export class AppComponent {
   //}
   ImagePath: string;
   constructor(private http: HttpClient){
-    this.ImagePath = 'favicon.ico'
+    this.ImagePath = '../assets/img/logo.ico'
     this.loadMdeData();
     this.loadMdiData();
   }
