@@ -30,7 +30,7 @@
           </tr>  
       </thead>  
       <tbody>
-        <tr *ngFor="let item of mdeData">  
+        <tr *ngFor="let item of mdeData | paginate: { itemsPerPage: 5, currentPage: p }">  
           <td>{{ item.idCliente }}</td>  
           <td>{{ item.NoSerie }}</td>
           <td>{{ item.geolocalizacion }}</td>  
@@ -40,6 +40,7 @@
         </tr>  
       </tbody>  
     </table>  
+    <pagination-controls (pageChange)="p = $event"></pagination-controls>
     <br><br>
     <h1>Registro de eventos MDI</h1>  
     
@@ -56,7 +57,7 @@
           </tr>  
       </thead>  
       <tbody>
-        <tr *ngFor="let item of mdiData">  
+        <tr *ngFor="let item of mdiData ">  
           <td>{{ item.idCliente }}</td>  
           <td>{{ item.NoSerie }}</td>  
           <td>{{ item.geolocalizacion }}</td>  

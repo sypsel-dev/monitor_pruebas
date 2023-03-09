@@ -16,6 +16,7 @@ interface Mde {
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  p: number = 1;
   device_mde = "MDE";
   title = 'myApp';
   mde: Mde[] = mdeData;  
