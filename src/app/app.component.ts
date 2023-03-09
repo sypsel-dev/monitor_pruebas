@@ -33,7 +33,7 @@ export class AppComponent {
     this.http
     .get('https://spysel-monitoreo.herokuapp.com/api/mde')
     .subscribe((mdeData: any)=>{
-      this.mdeData = mdeData;
+      this.mdeData = mdeData.reverse();
       //console.log(response);
       //alert(JSON.stringify(response));
     });
@@ -43,7 +43,7 @@ export class AppComponent {
     this.http
     .get('https://spysel-monitoreo.herokuapp.com/api/mdi')
     .subscribe((mdiData: any)=>{
-      this.mdiData = mdiData;
+      this.mdiData = mdiData.reverse();
     });
   }
 }
