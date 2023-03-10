@@ -4,6 +4,8 @@
     <a href="/" class="d-flex align-items-center text-dark text-decoration-none">
       <img [src] ="ImagePath" alt="image" height="32">
     </a>
+    <div class="text-end"><h1>Monitoreo de alertas</h1></div>
+    
   </header>
   <div>
     <ul>
@@ -13,61 +15,11 @@
   </div>
   
 
-  <h1>Monitoreo de alertas</h1>
   <hr class="col-3 col-md-2 mb-5">
 
-    <h1>Registro de eventos {{device_mde}}</h1>  
-    
-    <table class="table table-bordered table-hover">  
-      <thead>  
-          <tr>  
-            <th>ID Cliente</th>  
-            <th>No. Serie</th>  
-            <th>Coordenadas</th>  
-            <th>Punto Caliente</th>  
-            <th>Cuadrante</th>  
-            <th>Fecha</th>
-          </tr>  
-      </thead>  
-      <tbody>
-        <tr *ngFor="let item of mdeData | paginate: { itemsPerPage: 5, currentPage: p }">  
-          <td>{{ item.idCliente }}</td>  
-          <td>{{ item.NoSerie }}</td>
-          <td>{{ item.geolocalizacion }}</td>  
-          <td>{{ item.punto_caliente }}</td>  
-          <td>{{ item.cuadrante }}</td>  
-          <td>{{ item.fecha }}</td>  
-        </tr>  
-      </tbody>  
-    </table>  
-    <pagination-controls (pageChange)="p = $event"></pagination-controls>
+    <app-mde></app-mde>
     <br><br>
-    <h1>Registro de eventos MDI</h1>  
-    
-    <table class="table table-bordered table-hover">  
-      <thead>  
-          <tr>  
-            <th>ID Cliente</th>  
-            <th>No. Serie</th>  
-            <th>Coordenadas</th>  
-            <th>Corriente Baja</th>  
-            <th>Corriente Alta</th>
-            <th>Voltaje</th>
-            <th>Fecha</th>
-          </tr>  
-      </thead>  
-      <tbody>
-        <tr *ngFor="let item of mdiData ">  
-          <td>{{ item.idCliente }}</td>  
-          <td>{{ item.NoSerie }}</td>  
-          <td>{{ item.geolocalizacion }}</td>  
-          <td>{{ item.corriente_baja }}</td>  
-          <td>{{ item.corriente_alta }}</td> 
-          <td>{{ item.voltaje }}</td> 
-          <td>{{ item.fecha }}</td>  
-        </tr>  
-      </tbody>  
-    </table>
+    <app-mdi></app-mdi>
 </div>
 
 

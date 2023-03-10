@@ -1,0 +1,31 @@
+<div class="text-start">
+    <h1>Registro de eventos {{device_mde}}</h1>
+  </div>
+    
+  
+  <table class="table table-bordered table-hover" *ngIf="!isLoading; else loading">  
+    <thead>  
+        <tr>  
+          <th>ID Cliente</th>  
+          <th>No. Serie</th>  
+          <th>Coordenadas</th>  
+          <th>Punto Caliente</th>  
+          <th>Cuadrante</th>  
+          <th>Fecha</th>
+        </tr>  
+    </thead>  
+    <tbody>
+      <tr *ngFor="let item of mdeData | paginate: { itemsPerPage: 10, currentPage: p }">  
+        <td>{{ item.idCliente }}</td>  
+        <td>{{ item.NoSerie }}</td>
+        <td>{{ item.geolocalizacion }}</td>  
+        <td>{{ item.punto_caliente }}</td>  
+        <td>{{ item.cuadrante }}</td>  
+        <td>{{ item.fecha }}</td>  
+      </tr>  
+    </tbody>  
+  </table>  
+  <div class="text-end"><pagination-controls (pageChange)="p = $event"></pagination-controls></div>
+  <ng-template #loading>
+    <div class="loading-indicator">Cargando Registros......</div>
+  </ng-template>
