@@ -9,13 +9,15 @@ import { EnviaAlertaComponent } from './envia-alerta/envia-alerta.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { MdiComponent } from './mdi/mdi.component';
 import { MdeComponent } from './mde/mde.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     EnviaAlertaComponent,
     MdiComponent,
-    MdeComponent
+    MdeComponent,
+    ModalComponent
   ],
   imports: [
     BrowserModule,
