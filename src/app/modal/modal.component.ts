@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ModalDismissReasons, NgbOffcanvas  } from '@ng-bootstrap/ng-bootstrap';
 //import { ModalComponent } from './modal.component';
 
 @Component({
@@ -8,10 +8,10 @@ import { ModalDismissReasons, NgbModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent {
-  constructor(private modalService: NgbModal) {}
+  constructor(private offcanvasService: NgbOffcanvas) {}
 
   open(content: any) {
-    this.modalService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
+    this.offcanvasService.open(content, { ariaLabelledBy: 'modal-basic-title' }).result.then((result) => {
       console.log(`Closed with: ${result}`);
     }, (reason) => {
       console.log(`Dismissed ${this.getDismissReason(reason)}`);
