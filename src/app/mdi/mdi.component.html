@@ -27,5 +27,8 @@
 <div class="text-end"><pagination-controls (pageChange)="p = $event"></pagination-controls></div>
     
 <ng-template #loading>
-    <div class="loading-indicator">Cargando Registros......</div>
+  <button class="btn btn-primary" type="button" disabled>
+    <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+    Cargando Registros...
+  </button>
 </ng-template>

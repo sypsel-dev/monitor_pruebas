@@ -10,6 +10,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { MdiComponent } from './mdi/mdi.component';
 import { MdeComponent } from './mde/mde.component';
 import { ModalComponent } from './modal/modal.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ModalComponent } from './modal/modal.component';
     HttpClientModule,
     NoopAnimationsModule,
     NgbModule,
-    NgxPaginationModule
+    NgxPaginationModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
