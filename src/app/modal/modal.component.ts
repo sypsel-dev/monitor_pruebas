@@ -8,6 +8,7 @@ import { ModalDismissReasons, NgbOffcanvas  } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./modal.component.css']
 })
 export class ModalComponent {
+  textareaValue: string = '';
   constructor(private offcanvasService: NgbOffcanvas) {}
 
   open(content: any) {
@@ -26,5 +27,11 @@ export class ModalComponent {
     } else {
       return  `with: ${reason}`;
     }
+  }
+
+  onSubmit() {
+    console.log('Submit button clicked!');
+    console.log(this.textareaValue);
+    location.reload();
   }
 }
